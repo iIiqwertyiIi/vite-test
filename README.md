@@ -19,12 +19,14 @@ Configuring this repo:
 `yarn add prettier`\
 `echo {}> .prettierrc.cjs`\
 	&emsp;Inside .prettierrc.cjs:\
-		```module.exports = {\
+		```
+		module.exports = {\
 		    trailingComma: "es5",\
 		    tabWidth: 4,\
 		    semi: false,\
 		    singleQuote: true,\
-		  };```
+		  };
+		  ```\
 `yarn add eslint-plugin-prettier`\
 `yarn add eslint-config-prettier`\
 Inside .eslintrc.cjs:\
@@ -35,12 +37,20 @@ Inside .eslintrc.cjs:\
 `yarn add vite-plugin-checker`\
 Inside vite.config.js:\
 	&emsp;add `import checker from 'vite-plugin-checker'`\
-	&emsp;add ```checker({\
+	&emsp;add 
+	```
+	checker({\
             	eslint: {\
 	                lintCommand: 'eslint . --ext .js,.jsx,.ts,.tsx',\
 	            },\
-	        &emsp;}),``` to `plugins`\
+	        &emsp;}),
+		```
+		to `plugins`\
 Inside package.json:\
-	&emsp;add ```"lint": "eslint . --ext .js,.jsx,.ts,.tsx,.cjs",\
-	    "lint:fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx,.cjs"``` to `scripts`\
+	&emsp;add 
+	```
+	"lint": "eslint . --ext .js,.jsx,.ts,.tsx,.cjs",\
+	    "lint:fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx,.cjs"
+	    ```
+	    to `scripts`\
 ctrl+shift+p - ESLint: Restart ESLint Server\
