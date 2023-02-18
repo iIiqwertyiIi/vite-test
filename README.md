@@ -1,7 +1,7 @@
 Configuring this repo:
 
 yarn create vite\
-	&emsp;<nome do projeto>\
+	&emsp;nome do projeto\
 	&emsp;React\
 	&emsp;JavaScript\
 cd <nome do projeto>\
