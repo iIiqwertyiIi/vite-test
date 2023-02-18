@@ -19,7 +19,7 @@ Configuring this repo:
 `yarn add prettier`\
 `echo {}> .prettierrc.cjs`\
 	&emsp;Inside .prettierrc.cjs:\
-		```
+		&emsp;&emsp;```
 		module.exports = {\
 		    trailingComma: "es5",\
 		    tabWidth: 4,\
