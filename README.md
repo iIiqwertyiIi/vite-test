@@ -12,19 +12,19 @@ Configuring this repo:
 	&emsp;No\
 	&emsp;Browser\
 	&emsp;Use a popular style guide\
-	&emsp;Standard: https://github.com/standard/standard\
+	&emsp;Standard: https://github.com/standard/standard \
 	&emsp;JavaScript\
 	&emsp;Yes\
 	&emsp;yarn\
 `yarn add prettier`\
 `echo {}> .prettierrc.cjs`\
 	&emsp;Inside .prettierrc.cjs:\
-		&emsp;&emsp;```module.exports = {\
-		    &emsp;&emsp;&emsp;trailingComma: "es5",\
-		    &emsp;&emsp;&emsp;tabWidth: 4,\
-		    &emsp;&emsp;&emsp;semi: false,\
-		    &emsp;&emsp;&emsp;singleQuote: true,\
-		  &emsp;&emsp;};```\
+		```module.exports = {\
+		    trailingComma: "es5",\
+		    tabWidth: 4,\
+		    semi: false,\
+		    singleQuote: true,\
+		  };```
 `yarn add eslint-plugin-prettier`\
 `yarn add eslint-config-prettier`\
 Inside .eslintrc.cjs:\
@@ -36,11 +36,11 @@ Inside .eslintrc.cjs:\
 Inside vite.config.js:\
 	&emsp;add `import checker from 'vite-plugin-checker'`\
 	&emsp;add ```checker({\
-            	&emsp;&emsp;eslint: {\
-	                &emsp;&emsp;&emsp;lintCommand: 'eslint . --ext .js,.jsx,.ts,.tsx',\
-	            &emsp;&emsp;},\
+            	eslint: {\
+	                lintCommand: 'eslint . --ext .js,.jsx,.ts,.tsx',\
+	            },\
 	        &emsp;}),``` to `plugins`\
 Inside package.json:\
 	&emsp;add ```"lint": "eslint . --ext .js,.jsx,.ts,.tsx,.cjs",\
-	    &emsp;&emsp;"lint:fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx,.cjs"``` to `scripts`\
+	    "lint:fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx,.cjs"``` to `scripts`\
 ctrl+shift+p - ESLint: Restart ESLint Server\
